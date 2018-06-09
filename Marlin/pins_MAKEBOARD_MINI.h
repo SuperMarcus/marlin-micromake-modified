@@ -28,12 +28,18 @@
 //
 // Only 3 Limit Switch plugs on Micromake C1
 //
-#undef X_MIN_PIN
-#undef Y_MIN_PIN
-#undef Z_MIN_PIN
-#undef X_MAX_PIN
-#undef Y_MAX_PIN
-#undef Z_MAX_PIN
-#define X_STOP_PIN          2
-#define Y_STOP_PIN         15
-#define Z_STOP_PIN         19
+//#undef X_MIN_PIN
+//#undef Y_MIN_PIN
+//#undef Z_MIN_PIN
+//#undef X_MAX_PIN
+//#undef Y_MAX_PIN
+//#undef Z_MAX_PIN
+//#define X_STOP_PIN          2
+//#define Y_STOP_PIN         15
+//#define Z_STOP_PIN         19
+
+////for tmc2130
+//#define X_CS_PIN A5
+//#define Y_CS_PIN A9
+//#define Z_CS_PIN A10
+//#define E0_CS_PIN A12
