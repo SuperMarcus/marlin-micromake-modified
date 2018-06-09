@@ -291,7 +291,8 @@
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_4 0
-#define TEMP_SENSOR_BED 11
+//#define TEMP_SENSOR_BED 11
+#define TEMP_SENSOR_BED 0
 
 // Dummy thermistor constant temperature readings, for use with 998 and 999
 #define DUMMY_THERMISTOR_998_VALUE 25
@@ -383,7 +384,8 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-#define PIDTEMPBED
+//#define PIDTEMPBED
+//TODO
 
 //#define BED_LIMIT_SWITCHING
 
@@ -444,7 +446,8 @@
  */
 
 #define THERMAL_PROTECTION_HOTENDS // Enable thermal protection for all extruders
-#define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
+//#define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
+//TODO
 
 //===========================================================================
 //============================= Mechanical Settings =========================
@@ -512,14 +515,14 @@
 #define DELTA_DIAGONAL_ROD 217.0 // mm
 
 // height from z=0 to home position
-#define DELTA_HEIGHT 324.90 // get this value from auto calibrate
+#define DELTA_HEIGHT 323.56 // get this value from auto calibrate
 
-#define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // get these from auto calibrate
+#define DELTA_ENDSTOP_ADJ { -3.33, 0.0, -3.39 } // get these from auto calibrate
 
 /** add tmp */
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 151.0 // mm
+#define DELTA_SMOOTH_ROD_OFFSET 141.32 // mm
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 24.0 // mm
@@ -538,7 +541,7 @@
 // Trim adjustments for individual towers
 // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
 // measured in degrees anticlockwise looking from above the printer
-#define DELTA_TOWER_ANGLE_TRIM { 0.0, 0.0, 0.0 } // get these values from auto calibrate
+#define DELTA_TOWER_ANGLE_TRIM { -0.22, 0.24, -0.03 } // get these values from auto calibrate
 
 // delta radius and diaginal rod adjustments measured in mm
 //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
