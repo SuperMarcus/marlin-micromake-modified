@@ -493,15 +493,15 @@
     #define DELTA_CALIBRATION_DEFAULT_POINTS 4
 
     // Enable and set these values based on results of 'G33 A'
-    //#define H_FACTOR 1.01
-    //#define R_FACTOR 2.61
-    //#define A_FACTOR 0.87
+    #define H_FACTOR 1.16
+    #define R_FACTOR 5.37
+    #define A_FACTOR 2.14
 
 #endif
 
 #if ENABLED(DELTA_AUTO_CALIBRATION) || ENABLED(DELTA_CALIBRATION_MENU)
 // Set the radius for the calibration probe points - max 0.9 * DELTA_PRINTABLE_RADIUS for non-eccentric probes
-    #define DELTA_CALIBRATION_RADIUS 45.0 // mm
+    #define DELTA_CALIBRATION_RADIUS 50.0 // mm
     // Set the steprate for papertest probing
     #define PROBE_MANUALLY_STEP 0.025
 #endif
@@ -513,23 +513,14 @@
 #define DELTA_DIAGONAL_ROD 217.0 // mm
 
 // height from z=0 to home position
-#define DELTA_HEIGHT 322.90 // get this value from auto calibrate
+#define DELTA_HEIGHT 316.68 // get this value from auto calibrate
 
-#define DELTA_ENDSTOP_ADJ { -3.33, 0.0, -3.39 } // get these from auto calibrate
+#define DELTA_ENDSTOP_ADJ { -3.29, 0.0, -3.01 } // get these from auto calibrate
 
 /** add tmp */
 
-// Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 141.32 // mm
-
-// Horizontal offset of the universal joints on the end effector.
-#define DELTA_EFFECTOR_OFFSET 24.0 // mm
-
-// Horizontal offset of the universal joints on the carriages.
-#define DELTA_CARRIAGE_OFFSET 22.0 // mm
-
 // Horizontal distance bridged by diagonal push rods when effector is centered.
-#define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-(DELTA_EFFECTOR_OFFSET)-(DELTA_CARRIAGE_OFFSET))
+#define DELTA_RADIUS 94.69
 
 /** end add tmp */
 
@@ -539,7 +530,7 @@
 // Trim adjustments for individual towers
 // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
 // measured in degrees anticlockwise looking from above the printer
-#define DELTA_TOWER_ANGLE_TRIM { -0.22, 0.24, -0.03 } // get these values from auto calibrate
+#define DELTA_TOWER_ANGLE_TRIM { -0.26, 0.23, 0.03 } // get these values from auto calibrate
 
 // delta radius and diaginal rod adjustments measured in mm
 //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -638,7 +629,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 500, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 300, 20 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -646,7 +637,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 9000, 9000, 9000, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 7000, 7000, 7000, 6000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -656,7 +647,7 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_ACCELERATION          2000    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
@@ -787,7 +778,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 0     // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0   // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0.6  // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0.9  // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 4000
@@ -1042,7 +1033,7 @@
 
   // Set the boundaries for probing (where the probe can reach).
   // TODO: is 15 really appropriate?
-  #define DELTA_PROBEABLE_RADIUS (DELTA_PRINTABLE_RADIUS - 15)
+  #define DELTA_PROBEABLE_RADIUS (DELTA_PRINTABLE_RADIUS - 20)
 
 
   // For Cartesian machines, instead of dividing moves on mesh boundaries,
@@ -1198,7 +1189,7 @@
 #endif
 
 // Delta only homes to Z
-#define HOMING_FEEDRATE_Z  (200*60)
+#define HOMING_FEEDRATE_Z  (100*60)
 
 // @section calibrate
 
