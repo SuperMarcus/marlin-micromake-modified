@@ -76,8 +76,10 @@
 // build by the user have been successfully uploaded into firmware.
 #define STRING_CONFIG_H_AUTHOR "Marcus Zhou" // Who made the changes.
 #define SHOW_BOOTSCREEN
-#define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
+//#define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
+//#define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
+#define STRING_SPLASH_LINE1 "Marcus's Printer"
+#define STRING_SPLASH_LINE2 "marcuszhou.com"
 
 //
 // *** VENDORS PLEASE READ *****************************************************
@@ -523,9 +525,9 @@
 #define DELTA_DIAGONAL_ROD 217.0 // mm
 
 // height from z=0 to home position
-#define DELTA_HEIGHT 316.68 // get this value from auto calibrate
+#define DELTA_HEIGHT 317.03 // get this value from auto calibrate
 
-#define DELTA_ENDSTOP_ADJ { -3.29, 0.0, -3.01 } // get these from auto calibrate
+#define DELTA_ENDSTOP_ADJ { -3.00, 0.00, -2.70 } // get these from auto calibrate
 
 /** add tmp */
 
@@ -639,7 +641,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 300, 20 }
+#define DEFAULT_MAX_FEEDRATE          { 100, 100, 100, 20 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -647,7 +649,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 7000, 7000, 7000, 6000 }
+#define DEFAULT_MAX_ACCELERATION      { 800, 800, 800, 500 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -788,7 +790,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 0     // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0   // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0.9  // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0.90  // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 4000
