@@ -79,7 +79,7 @@
  * and/or decrease WATCH_TEMP_INCREASE. WATCH_TEMP_INCREASE should not be set
  * below 2.
  */
-#define WATCH_TEMP_PERIOD 20                // Seconds
+#define WATCH_TEMP_PERIOD 30                // Seconds
 #define WATCH_TEMP_INCREASE 2               // Degrees Celsius
 #endif
 
@@ -93,7 +93,7 @@
 /**
  * As described above, except for the bed (M140/M190/M303).
  */
-#define WATCH_BED_TEMP_PERIOD 60                // Seconds
+#define WATCH_BED_TEMP_PERIOD 90                // Seconds
 #define WATCH_BED_TEMP_INCREASE 2               // Degrees Celsius
 #endif
 
@@ -1099,13 +1099,13 @@
    * STEALTHCHOP needs to be enabled.
    * M913 X/Y/Z/E to live tune the setting
    */
-  //#define HYBRID_THRESHOLD
+  #define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD      40  // [mm/s]
+  #define X_HYBRID_THRESHOLD      30  // [mm/s]
   #define X2_HYBRID_THRESHOLD     100
-  #define Y_HYBRID_THRESHOLD      40
+  #define Y_HYBRID_THRESHOLD      30
   #define Y2_HYBRID_THRESHOLD     100
-  #define Z_HYBRID_THRESHOLD      40
+  #define Z_HYBRID_THRESHOLD      30
   #define Z2_HYBRID_THRESHOLD     100
   #define E0_HYBRID_THRESHOLD     10
   #define E1_HYBRID_THRESHOLD     30
