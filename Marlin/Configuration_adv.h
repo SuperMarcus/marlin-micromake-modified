@@ -1010,7 +1010,7 @@
   #define Z_IS_TMC2130
   //#define Z2_IS_TMC2130
   #define E0_IS_TMC2130
-  //#define E1_IS_TMC2130
+  #define E1_IS_TMC2130
   //#define E2_IS_TMC2130
   //#define E3_IS_TMC2130
   //#define E4_IS_TMC2130
@@ -1108,7 +1108,7 @@
   #define Z_HYBRID_THRESHOLD      25
   #define Z2_HYBRID_THRESHOLD     100
   #define E0_HYBRID_THRESHOLD     10
-  #define E1_HYBRID_THRESHOLD     30
+  #define E1_HYBRID_THRESHOLD     10
   #define E2_HYBRID_THRESHOLD     30
   #define E3_HYBRID_THRESHOLD     30
   #define E4_HYBRID_THRESHOLD     30
