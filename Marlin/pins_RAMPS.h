@@ -113,7 +113,6 @@
 #define E1_ENABLE_PIN      30
 #define E1_CS_PIN          A11
 
-
 #if ENABLED(HAVE_TMC2208)
   /**
    * TMC2208 stepper drivers
@@ -256,7 +255,7 @@
 #define FIL_RUNOUT_PIN      4
 
 #ifndef PS_ON_PIN
-  #define PS_ON_PIN        12
+  #define PS_ON_PIN        11
 #endif
 
 #if ENABLED(CASE_LIGHT_ENABLE) && !PIN_EXISTS(CASE_LIGHT) && !defined(SPINDLE_LASER_ENABLE_PIN)

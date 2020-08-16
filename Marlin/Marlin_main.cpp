@@ -13912,7 +13912,8 @@ void disable_all_steppers() {
       SERIAL_ECHOLN("mA)");
     }
     #if CURRENT_STEP_DOWN > 0
-      // Decrease current if is_otpw is true and driver is enabled and there's been more then 4 warnings
+      // Decreas
+      // current if is_otpw is true and driver is enabled and there's been more then 4 warnings
       if (data.is_otpw && !st.isEnabled() && otpw_cnt > 4) {
         st.setCurrent(st.getCurrent() - CURRENT_STEP_DOWN, R_SENSE, HOLD_MULTIPLIER);
         #if ENABLED(REPORT_CURRENT_CHANGE)
